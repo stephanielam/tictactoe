@@ -11,6 +11,7 @@ $(function() {
   var score1 = 0;
   var score2 = 0;
   var pos = [[], []];
+  var theme = 'hockey'
 
   function gameOver(){
     if (tictactoe(0)) {
@@ -75,7 +76,7 @@ $(function() {
       $(this).addClass(turn);
 
       var elem = document.createElement("img");
-      elem.src = (turn == 'player-1') ? 'images/X.gif' : 'images/O.gif';
+      elem.src = (turn == 'player-1') ? 'images/'+theme+'/X.png' : 'images/'+theme+'/O.png';
       document.getElementById(this.id).appendChild(elem);
       playTurn();
     }
